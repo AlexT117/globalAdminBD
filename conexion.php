@@ -6,4 +6,7 @@ $bd = "agencia";
 $conexion = new mysqli($server, $user, $pass, $bd);
 
 
+
+
+
 ?>
