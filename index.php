@@ -27,6 +27,7 @@
     <p><input type="submit" value="Guardar"></p>
     </form>';
 
+
     if ($result = $conexion->query($query)) {
 		while ($row = $result->fetch_assoc()) {
 			$idV = $row["idVehiculo"];
@@ -38,7 +39,9 @@
             $Nom2 = $row["nombre"];
             $idTDV = $row["tipoDeVehiculo"];
             $sta = $row["status"];
-			echo $idV. " " . $idM  . " " . $pre . " " . $mot . " " . $idT . " " . $Tra . " " . $Nom2 . " " . $idTDV . " " . $sta . "<br>";
+			echo $idV. " " . $idM  . " " . $pre . " " . $mot . " " . $idT . " " . $Tra . " " . $Nom2 . " " . $idTDV . " " . $sta . 
+            "<a href='borrar.php?id=".$idV."'> eliminar</a><br>";
+            ;
 		}
 
 	/*freeresultset*/
