@@ -39,9 +39,12 @@
             $Nom2 = $row["nombre"];
             $idTDV = $row["tipoDeVehiculo"];
             $sta = $row["status"];
-			echo $idV. " " . $idM  . " " . $pre . " " . $mot . " " . $idT . " " . $Tra . " " . $Nom2 . " " . $idTDV . " " . $sta . 
-            "<a href='borrar.php?id=".$idV."'> eliminar</a><br>";
-            ;
+			echo $idV. " " . $idM  . " " . $pre . " " . $mot . " " . $Tra . " " . $Nom2 . " " . $idTDV . " " . $sta . 
+            "<a href='borrar.php?id=".$idV."'> eliminar</a> ";
+           
+            echo "<a href='editar.php?id=$idV'>";
+            echo "editar";
+            echo "</a> <br>";
 		}
 
 	/*freeresultset*/
