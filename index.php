@@ -12,6 +12,8 @@
     ON ve.idTipoDeVehiculo = tdv.idTipoDeVehiculo 
     ORDER BY ve.idVehiculo";
 
+    echo "<a href='reporte.php'> Reporte <a/> <br>";
+
     echo ' INSERTAR NUEVO VEHICULO 
     <form action="actualiza.php" method = "post">
     <p>id: <input type="text" name="Id">
@@ -27,6 +29,7 @@
     <p><input type="submit" value="Guardar"></p>
     </form>';
 
+    
 
     if ($result = $conexion->query($query)) {
 		while ($row = $result->fetch_assoc()) {
