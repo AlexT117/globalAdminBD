@@ -14,6 +14,8 @@
 
     echo "<a href='reporte.php'> Reporte <a/> <br>";
 
+    echo "<a href='respaldoGeneral.php'> Respaldar BD </a> <br>";
+
     echo ' INSERTAR NUEVO VEHICULO 
     <form action="actualiza.php" method = "post">
     <p>id: <input type="text" name="Id">

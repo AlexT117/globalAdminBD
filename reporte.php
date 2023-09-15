@@ -34,26 +34,26 @@
     $pdf->SetXY(240,40);
     $pdf->Cell (50,20,"La fecha es: $fechaActual",0,1);
 
-    $pdf->Cell (15,10,"No",'LR',0);
-    $pdf->Cell (40,10,"Marca",'LR',0);
-    $pdf->Cell (40,10,"Precio",'LR',0);
-    $pdf->Cell (50,10,"Motor",'LR',0);
-    $pdf->Cell (30,10,"Traccion",'LR',0);
-    $pdf->Cell (45,10,"Modelo",'LR',0);
-    $pdf->Cell (40,10,"Tipo",'LR',1);
+    $pdf->Cell (15,10,"No",'LRBT',0);
+    $pdf->Cell (40,10,"Marca",'LRBT',0);
+    $pdf->Cell (40,10,"Precio",'LRBT',0);
+    $pdf->Cell (50,10,"Motor",'LRBT',0);
+    $pdf->Cell (30,10,"Traccion",'LRBT',0);
+    $pdf->Cell (45,10,"Modelo",'LRBT',0);
+    $pdf->Cell (40,10,"Tipo",'LRBT',1);
 
     //Datos
     $result = $conexion->query($query);
 
     foreach($result as $row)
     {
-        $pdf->Cell (15,10,$row['idVehiculo'],'LR',0);
-        $pdf->Cell (40,10,$row['Marca'],'LR',0);
-        $pdf->Cell (40,10,$row['precio'],'LR',0);
-        $pdf->Cell (50,10,$row['motor'],'LR',0);
-        $pdf->Cell (30,10,$row['traccion'],'LR',0);
-        $pdf->Cell (45,10,$row['nombre'],'LR',0);
-        $pdf->Cell (40,10,$row['tipoDeVehiculo'],'LR',1);
+        $pdf->Cell (15,10,$row['idVehiculo'],'LRB',0);
+        $pdf->Cell (40,10,$row['Marca'],'LRB',0);
+        $pdf->Cell (40,10,$row['precio'],'LRB',0);
+        $pdf->Cell (50,10,$row['motor'],'LRB',0);
+        $pdf->Cell (30,10,$row['traccion'],'LRB',0);
+        $pdf->Cell (45,10,$row['nombre'],'LRB',0);
+        $pdf->Cell (40,10,$row['tipoDeVehiculo'],'LRB',1);
     }
 
 
